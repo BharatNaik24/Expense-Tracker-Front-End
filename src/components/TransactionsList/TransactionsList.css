@@ -1,0 +1,80 @@
+.transactions-container {
+  font-family: "Roboto";
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transactions-table th,
+.transactions-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.transactions-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.transactions-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transactions-table tr:hover {
+  background-color: #ddd;
+}
+
+.transactions-table th button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.transactions-table th button:hover {
+  background-color: #45a049;
+  
+}
+.credit {
+  color: green;
+  font-weight: 600;
+}
+.debit {
+  color: red;
+  font-weight: 600;
+}
+.running_balance {
+  color: rgb(0, 162, 255);
+  font-weight: 600;
+}
+.addIcon  {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
