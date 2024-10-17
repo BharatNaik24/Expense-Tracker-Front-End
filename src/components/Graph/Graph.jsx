@@ -14,7 +14,7 @@ const ExpensesDonut = () => {
       labels: ["Income", "Expenses"],
       colors: ["#00E396", "#FF4560"],
       legend: {
-        position: "bottom",
+        show: false, // Hide the legend
       },
       plotOptions: {
         donut: {

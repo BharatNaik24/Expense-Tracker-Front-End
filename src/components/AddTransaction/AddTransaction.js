@@ -20,6 +20,21 @@ const AddTransaction = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate form data
+    if (!formData.amount || formData.amount <= 0) {
+      setError("Amount must be greater than 0");
+      return;
+    }
+    if (!formData.description.trim()) {
+      setError("Description cannot be empty");
+      return;
+    }
+    if (!formData.date) {
+      setError("Date must be selected");
+      return;
+    }
+
     try {
       const response = await fetch("http://localhost:3002/api/expenses", {
         method: "POST",
@@ -41,8 +56,6 @@ const AddTransaction = () => {
       setError("Failed to add transaction");
     }
   };
-
-  const handleAddTransactionClick = () => {};
 
   return (
     <div className="add-transaction-container">
@@ -87,9 +100,7 @@ const AddTransaction = () => {
           />
         </label>
 
-        <button type="submit" onClick={handleAddTransactionClick}>
-          Add Transaction
-        </button>
+        <button type="submit">Add Transaction</button>
       </form>
     </div>
   );
